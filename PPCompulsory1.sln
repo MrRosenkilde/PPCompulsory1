@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28803.352
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPCompulsory1.Api", "PPCompulsory1\PPCompulsory1.Api.csproj", "{D2BFC8B2-BEB5-42DD-93A1-AF0A1FAAB072}"
 EndProject
@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{908BF295-FC48-4074-B92C-24BE069D5351}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreTest", "CoreTest\CoreTest.csproj", "{869B998F-74D6-4149-8ED6-8738D6A1D682}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPCompulsory", "PPCompulsory\PPCompulsory.csproj", "{7449D5EA-1C45-4012-B94A-E1152C2D205F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,9 @@ Global
 		{908BF295-FC48-4074-B92C-24BE069D5351}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{908BF295-FC48-4074-B92C-24BE069D5351}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{908BF295-FC48-4074-B92C-24BE069D5351}.Release|Any CPU.Build.0 = Release|Any CPU
-		{869B998F-74D6-4149-8ED6-8738D6A1D682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{869B998F-74D6-4149-8ED6-8738D6A1D682}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{869B998F-74D6-4149-8ED6-8738D6A1D682}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{869B998F-74D6-4149-8ED6-8738D6A1D682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7449D5EA-1C45-4012-B94A-E1152C2D205F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7449D5EA-1C45-4012-B94A-E1152C2D205F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
