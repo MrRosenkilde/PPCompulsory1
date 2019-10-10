@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28803.352
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PPCompulsory1.Api", "PPCompulsory1\PPCompulsory1.Api.csproj", "{D2BFC8B2-BEB5-42DD-93A1-AF0A1FAAB072}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{D84A5142-6D68-4BBA-A74A-6659C915A2B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo.csproj", "{D84A5142-6D68-4BBA-A74A-6659C915A2B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{908BF295-FC48-4074-B92C-24BE069D5351}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{908BF295-FC48-4074-B92C-24BE069D5351}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeNumber", "PrimeNumber\PrimeNumber.csproj", "{F25471C7-1481-41DE-A81E-A79F447A1041}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{908BF295-FC48-4074-B92C-24BE069D5351}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{908BF295-FC48-4074-B92C-24BE069D5351}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{908BF295-FC48-4074-B92C-24BE069D5351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F25471C7-1481-41DE-A81E-A79F447A1041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25471C7-1481-41DE-A81E-A79F447A1041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25471C7-1481-41DE-A81E-A79F447A1041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25471C7-1481-41DE-A81E-A79F447A1041}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
