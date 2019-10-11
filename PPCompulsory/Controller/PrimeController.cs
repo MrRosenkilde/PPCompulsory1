@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using PPCompulsory.BLL;
+using PPCompulsory.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 
 namespace PPCompulsory.Controller
 {
@@ -11,24 +11,33 @@ namespace PPCompulsory.Controller
     [ApiController]
     public class PrimeController : ControllerBase
     {
-        // GET: api/Prime
+        private readonly IPrime _primeService;
+        Prime primeModel = new Prime();
+
+        public List<int> SequentialResults { get; set; }
+        public PrimeController(IPrime primeService)
+        {
+            _primeService = primeService;
+        }
+
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult GetPrimesSequential(Prime model)
         {
-            return new string[] { "value1", "value2" };
+            if(model != null)
+            {
+                primeModel.MinimumValue = model.MinimumValue;
+                primeModel.MaximumValue = model.MaximumValue;
+
+                //_primeService.GetPrimeSequential(primeModel.MinimumValue, primeModel.MaximumValue);
+                
+            }
+            else
+            {
+                throw new Exception("something went wrong");
+            }
+            return null;
         }
 
-        // GET: api/Prime/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/Prime
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+       
     }
 }
