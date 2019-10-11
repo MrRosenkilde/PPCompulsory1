@@ -7,39 +7,24 @@ function sequentielPrimeSearch()
     primesXMLRequest('primes/sequentiel');
 }
 function primesXMLRequest(baseQuery) {
+
+    document.getElementById('results').innerHTML = "Copy content from file here, to see the results";
+
     let from = document.getElementById('min').valueAsNumber;
     let to = document.getElementById('max').valueAsNumber;
-    $.ajax({
-        method: 'POST',
-        url: baseQuery + '? from=' + from + ' &to=' + to,
-    }).done((data) => {
-        var element = document.createElement('a');
-        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(data));
-        element.setAttribute('download', 'primes.txt');
+    var element = document.createElement('a');
+    element.setAttribute('href', baseQuery + '?from='+from+'&to='+to);
+    //element.setAttribute('download', 'primes.txt');
 
-        element.style.display = 'none';
-        document.body.appendChild(element);
+    element.style.display = 'none';
+    document.body.appendChild(element);
 
-        element.click();
+    element.click();
 
-        document.body.removeChild(element);
-
-    });
+    document.body.removeChild(element);
 }
 
 function parallelPrimeSearch()
 {
     primesXMLRequest('primes/parallel');
-}
-function test(i) {
-    return Promise.resolve()
-        .then(function () {
-
-            // update the DOM
-            setTimeout(function () {
-                document.getElementById('results').innerHTML += i;
-            }, 0);
-
-            return i;
-        });
 }
