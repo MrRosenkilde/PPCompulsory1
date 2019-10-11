@@ -3,15 +3,16 @@ using System;
 using Xunit;
 using System.Linq;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 namespace CoreTest
 {
     public class PrimeGeneratorTests
     {
         [Fact]
-        public void PrimesBelow10()
+        public async Task PrimesBelow10Async()
         {
             var expected = new long[] { 2, 3, 5, 7 }.AsEnumerable();
-            var actual = new PrimeGenerator().SieveOfEratosthenesParallel(0, 10);
+            var actual = await new PrimeGenerator().GetPrimesParallel(0, 10);
             Assert.True(expected.SequenceEqual(actual));
 
         }
@@ -20,12 +21,12 @@ namespace CoreTest
         [InlineData(1_000_000, 2_000_000)]
         [InlineData(0,10_000_000)]
         [InlineData(10_000_000, 20_000_000)]
-        public void SequentialAndParallelAgrees(int from,int to)
+        public async Task SequentialAndParallelAgreesAsync(int from,int to)
         {
             var pg = new PrimeGenerator();
-            var sequential = pg.GetPrimesSequential(from, to);
-            //var parallel = pg.SieveOfEratosthenesParallel(from, to);
-            //Assert.True(sequential.SequenceEqual(parallel));
+            var sequential =await pg.GetPrimesSequential(from, to);
+            var parallel = await pg.GetPrimesParallel(from, to);
+            Assert.Equal(sequential.Count, parallel.Count);
         }
     }
     class int_pair
