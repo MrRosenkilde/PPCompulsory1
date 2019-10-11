@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PPCompulsory.BLL;
+using PPCompulsory.BLL.Services;
 
 namespace PPCompulsory
 {
@@ -31,8 +33,8 @@ namespace PPCompulsory
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            
 
+            services.AddScoped<IPrime,PrimeService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddMvc();
         }

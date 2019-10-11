@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Home page";
+}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+      asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+      crossorigin="anonymous"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+
+<div class="container-fluid">
+    <div class="jumbotron justify-content-md-center">
+        <label>Please enter the minimum and maximum number!</label>
+        <br />
+        <div class="row form-row">
+            <div class="col">
+                <label for="min">From</label>
+                <input type="number" class="form-control" id="min" value="0"/>
+            </div>
+            <div class="col">
+                <label for="max">To</label>
+                <input type="number" class="form-control" id="max" value="10000"/>
+            </div>
+        </div>
+        <div class="row form-row">
+            <button class="col m-2 btn btn-primary" onClick="sequentielPrimeSearch()">Sequentiel Search</button>
+        </div>
+
+        <div class="row form-row">
+            <button class="col m-2 btn btn-success" onClick="parallelPrimeSearch()">ParallelSearch</button>
+        </div>
+        <br />
+        @*<div class="list-group">
+            <div class="list-group-item"></div>
+            <div class="list-group-item">100,101,102</div>
+        </div>*@
+        <div class="form-row row" style="min-height:500px">
+            <textarea class="form-text col bg-white border-dark" style="min-height:100%!important" id="results">HEY LOOK AT ME!</textarea>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+        asp-fallback-test="window.jQuery"
+        crossorigin="anonymous"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+        asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+        crossorigin="anonymous"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+    
+</script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>

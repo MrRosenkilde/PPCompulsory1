@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PPCompulsory1.Logic
+namespace PPCompulsory1.Core
 {
     public class PrimeGenerator
     {
@@ -102,7 +102,7 @@ namespace PPCompulsory1.Logic
             //    });
             //    Task.WaitAll(t, t2, t3);
             //}
-            int threads = 24;
+            int threads = to < 24 ? 2 : 24;
             for (int i = 2; i <= sqrt; i += threads)
             {
                 Task[] tasks = new Task[threads];

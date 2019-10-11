@@ -7,7 +7,7 @@ namespace PPCompulsory.BLL
 {
     public interface IPrime
     {
-        IEnumerable<long> GetPrimeSequential(int from, int to);
+        Task<IEnumerable<long>> GetPrimeSequentialAsync(int from, int to);
         Task<List<long>> GetPrimesParallel(int from, int to);
     }
 }

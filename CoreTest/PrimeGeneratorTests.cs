@@ -1,9 +1,10 @@
-using PPCompulsory1.Logic;
 using System;
 using Xunit;
 using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using PPCompulsory1.Core;
+
 namespace CoreTest
 {
     public class PrimeGeneratorTests

@@ -1,4 +1,4 @@
-﻿using PPCompulsory1.Logic;
+﻿using PPCompulsory1.Core;
 using System;
 using System.Diagnostics;
 using System.Linq;
@@ -8,7 +8,7 @@ namespace Demo
 {
     class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             var pg = new PrimeGenerator();
             var int_pairs = new int_pair[]
